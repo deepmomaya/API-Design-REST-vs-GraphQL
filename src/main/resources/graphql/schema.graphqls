@@ -1,0 +1,17 @@
+type Student {
+    id: ID
+    name: String
+    email: String
+    courses: [Course]
+}
+
+type Course {
+    id: ID
+    title: String
+    instructor: String
+}
+
+type Query {
+    students: [Student]
+    student(id: ID!): Student
+}
